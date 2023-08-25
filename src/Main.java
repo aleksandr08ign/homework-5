@@ -72,16 +72,17 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
-        byte[] number = new byte[3];
+        int[] number = new int[3];
         number[0] = 1;
         number[1] = 2;
         number[2] = 3;
-        for (int c = 0; c <= 2; c++) {
-            if ((number[c] % 2) == 0) {   // выводит только четные значения в массиве
-                System.out.println(number[c]);
-            } else {
-                System.out.println(number[c] + 1);
+        for (int c = 0; c < number.length; c++) {
+            if (number[c] % 2 == 1) {
+                number[c] = number[c] + 1;
             }
         }
+        System.out.println(Arrays.toString(number));
+
     }
 }
+
